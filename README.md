@@ -16,6 +16,10 @@ Com o alto volume de entrada e saída de produtos (grãos especiais, cápsulas, 
 
 Este projeto visa resolver essa problemática implementando um SGC robusto que automatiza integralmente a operação comercial, focando no controle de estoque automático, prevenção de falhas operacionais e fornecimento de ferramentas de análise de negócio para a tomada de decisão.
 
+![##Diagrama de Caso de Uso](https://github.com/DanielCScience/Sistema-de-Gest-o-Comercial-/blob/main/Captura%20de%20tela%202026-04-11%20192419.png?raw=true)
+![##Diagrama de Classe](https://github.com/DanielCScience/Sistema-de-Gest-o-Comercial-/blob/main/Captura%20de%20tela%202026-04-11%20192811.png?raw=true)
+![##Diagrama de Domínio](https://github.com/DanielCScience/Sistema-de-Gest-o-Comercial-/blob/main/Captura%20de%20tela%202026-04-11%20192956.png?raw=true)
+
 ### 🎯 Objetivos
 * **Controle de Estoque Automático:** Baixa imediata de produtos após a venda e prevenção de pedidos com saldo insuficiente.
 * **Cadastro Unificado:** Sistema confiável para gestão de clientes e produtos.
