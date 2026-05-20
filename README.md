@@ -88,6 +88,32 @@ O sistema foi desenhado sob uma arquitetura de três camadas (Apresentação, Se
 
 ---
 
+## 🛠️ Como Executar o Projeto
+### Pré-requisitos
+- Ter o **Java 17** instalado na máquina.
+- Ter o **MySQL** instalado e rodando na porta local padrão `3306`.
+### Passo a Passo
+1. Clone este repositório para a sua máquina:
+   ```bash
+   git clone https://github.com/SeuUsuario/NomeDoRepositorio.git
+   ```
+2. Abra a pasta do projeto e edite as credenciais do banco de dados no arquivo `src/main/resources/application.properties` caso seja diferente da sua máquina:
+   ```properties
+   spring.datasource.username=root
+   spring.datasource.password=root
+   ```
+3. O Spring Boot com JPA está configurado como `update`, portanto ele irá **criar todas as tabelas do banco automaticamente** no momento do primeiro Run.
+4. Abra a sua IDE favorita e execute a classe `VendasApplication.java`.
+---
+## 📖 Como Testar (Documentação Swagger)
+Com a API rodando, você não precisa de plataformas como Postman. O sistema conta com o **Swagger UI**, uma tela limpa e intuitiva para testar todos os endpoints, já adaptada para receber seu Token Bearer.
+1. Acesse pelo navegador: `http://localhost:8080/swagger-ui.html`
+2. Utilize o endpoint `POST /api/v1/funcionarios` para cadastrar um usuário ADMIN (O cadastro é público e as senhas serão automaticamente criptografadas).
+3. Vá até a rota de autenticação (`POST /api/v1/auth/login`) informando o e-mail e senha que você acabou de criar e copie o token gerado.
+4. Volte ao topo da página do Swagger, clique no ícone **Authorize 🔒**, e cole o token.
+5. Sucesso! Você já pode realizar requisições privadas com segurança!
+---
+
 ## 👥 Equipe e Créditos
 
 * **Desenvolvedores (Prestadores):** Daniel Lourenço Lustosa | Vinicius Gabriel Couto Machado
