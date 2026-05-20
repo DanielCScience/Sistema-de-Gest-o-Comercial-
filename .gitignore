@@ -53,7 +53,7 @@ out/
 *.jar
 *.war
 *.nar
-*.ear
+*.eargit commit -m "feat: adiciona camadas de servico (Cliente, Funcionario e Produto)"
 *.zip
 *.tar.gz
 *.rar
