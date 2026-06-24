@@ -26,7 +26,6 @@ public class VendaService {
         }
 
         pedido.setStatus(StatusPedido.CONCLUIDO);
-        pedidoService.alterarPedido(pedido.getIdpedido(), pedido);
 
         Venda venda = new Venda();
         venda.setPedido(pedido);
