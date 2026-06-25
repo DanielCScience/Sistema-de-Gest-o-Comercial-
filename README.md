@@ -1,6 +1,6 @@
 Parte 3
 
-# Sistema de Gestão Comercial
+# Sistema de Gestão Comercial PARTE 3
 Um sistema completo de Gestão Comercial, construído com **Spring Boot** no back-end e uma interface desktop nativa em **Java Swing**. O sistema permite gerenciar o ciclo completo de vendas, abrangendo clientes, produtos, pedidos, faturamento e geração de relatórios de desempenho, tudo garantido por autenticação segura via **JWT (JSON Web Token)**.
 ## 🚀 Tecnologias Utilizadas
 ### Back-end
