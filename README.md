@@ -1,3 +1,84 @@
+Parte 3
+
+# Sistema de Gestão Comercial
+Um sistema completo de Gestão Comercial, construído com **Spring Boot** no back-end e uma interface desktop nativa em **Java Swing**. O sistema permite gerenciar o ciclo completo de vendas, abrangendo clientes, produtos, pedidos, faturamento e geração de relatórios de desempenho, tudo garantido por autenticação segura via **JWT (JSON Web Token)**.
+## 🚀 Tecnologias Utilizadas
+### Back-end
+- **Java 17**
+- **Spring Boot 3** (Web, Data JPA, Security, Validation)
+- **Spring Security** com autenticação via **JWT** (io.jsonwebtoken)
+- **Banco de Dados:** MySQL
+- **Documentação da API:** Swagger / OpenAPI 3
+- **Lombok** (para redução de código repetitivo)
+### Front-end / Interface Gráfica
+- **Java Swing** (Desktop GUI nativo)
+- **HttpClient (Java 11+)** para consumo REST assíncrono
+- **Jackson** (Deserialização de JSON na UI)
+---
+## 📦 Funcionalidades Principais
+- **Autenticação e Autorização:**
+  - Login de usuários e geração de token JWT.
+  - Rotas protegidas exigindo token no cabeçalho `Authorization: Bearer <token>`.
+- **Gestão de Clientes:**
+  - Cadastro, edição, exclusão e consulta de clientes (por Nome ou CPF).
+- **Gestão de Funcionários:**
+  - Cadastro de funcionários com diferentes perfis de acesso (`ADMIN`, `USER`).
+- **Catálogo de Produtos:**
+  - Controle de inventário, cadastro de produtos e preços.
+- **Gestão de Pedidos:**
+  - Criação de novos pedidos vinculados a clientes, funcionários e lista de itens.
+  - Consulta de pedidos por ID.
+  - Cancelamento de pedidos existentes.
+- **Faturamento e Vendas:**
+  - Faturamento de pedidos transformando-os em Vendas registradas.
+  - Definição da forma de pagamento na emissão da venda.
+- **Relatórios:**
+  - Geração de métricas de vendas anuais (agrupadas por mês).
+  - Consulta de histórico de compras individual por Cliente.
+  - Relatórios de vendas delimitados por um período específico (Data Inicial e Final).
+---
+## 🛠️ Como Executar o Projeto
+### Pré-requisitos
+- **JDK 17** ou superior instalado.
+- **MySQL** rodando localmente na máquina (ou XAMPP).
+- **Maven** instalado (ou uso pela própria IDE).
+### 1. Configurando o Banco de Dados
+1. Certifique-se de que o servidor MySQL está rodando.
+2. Crie um schema no MySQL para o projeto (o nome fica definido no arquivo `src/main/resources/application.properties`).
+3. Ajuste as credenciais de `spring.datasource.username` e `password` no arquivo `application.properties` se necessário.
+4. Ao rodar o Spring Boot pela primeira vez, o Hibernate (`update`) se encarregará de criar todas as tabelas automaticamente.
+### 2. Rodando o Back-end (Spring Boot)
+Você pode rodar diretamente pela sua IDE (Eclipse, IntelliJ, VS Code) executando a classe principal `VendasApplication`.
+### 3. Rodando o Front-end (Interface Gráfica Swing)
+Após iniciar a API Spring Boot, abra a classe e execute o método `main` localizado em:
+`src/main/java/com/api/vendas/ui/MainApp.java`
+Uma janela de Login será aberta.
+1. Para o primeiro acesso, você pode clicar em **"Criar Conta"**, preencher seus dados de funcionário e salvar.
+2. Retorne para a tela principal e faça o login com o seu Email e Senha cadastrados.
+3. Utilize as abas no topo da tela para navegar entre as entidades do sistema!
+---
+## 📚 Documentação da API (Swagger)
+Com o Back-end rodando, você pode visualizar e testar todos os endpoints REST diretamente pela interface do Swagger:
+- **Acesse no navegador:** `http://localhost:8080/swagger-ui/index.html` (ou a rota definida no projeto)
+- Para testar endpoints protegidos no Swagger, obtenha um token JWT na rota de Login e adicione-o usando o botão **"Authorize"**.
+---
+## 📝 Notas e Práticas Aplicadas
+- **Integração Desktop-REST:** Demonstra uma integração direta entre uma aplicação Desktop robusta rodando na máquina do cliente com uma API Web independente.
+- **Arquitetura de Camadas:** Organização de Modelos, Controladores (REST), Serviços e Repositórios bem definidos no backend.
+- **Tratamento de Exceções:** Retornos legíveis de erro (Status 400, 403, 404) do servidor que são interceptados e mostrados amigavelmente em pop-ups (`JOptionPane`) no Java Swing.
+
+
+
+
+
+
+
+
+
+
+
+FIM DA PARTE 3
+
 # ☕ Sistema de Gestão Comercial (SGC) - Café Arabia
 
 ![Java](https://img.shields.io/badge/Java-21+-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
